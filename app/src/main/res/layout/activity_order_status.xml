@@ -17,7 +17,8 @@
             android:id="@+id/listOrders"
             android:background="@android:color/transparent"
             android:layout_width="match_parent"
-            android:layout_height="550dp">
+            android:layout_height="550sp">
+
 
 
         </androidx.recyclerview.widget.RecyclerView>
@@ -26,7 +27,7 @@
             android:id="@+id/listCalls"
             android:background="@android:color/transparent"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="100sp">
 
 
         </androidx.recyclerview.widget.RecyclerView>

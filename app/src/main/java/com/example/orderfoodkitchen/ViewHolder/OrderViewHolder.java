@@ -10,7 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.orderfoodkitchen.Interface.ItemClickListner;
 import com.example.orderfoodkitchen.R;
 
-public class OrderViewHolder  extends RecyclerView.ViewHolder implements View.OnClickListener,View.OnCreateContextMenuListener{
+public class OrderViewHolder  extends RecyclerView.ViewHolder implements View.OnClickListener,View.OnCreateContextMenuListener
+{
+    //,View.OnLongClickListener -> was in top line // deleted and *** WORKING !!!!!!!!!!!!! ****
 
     public TextView txtOrderId,txtOrderStatus,txtOrderPhone,txtOrderAddress;
     private ItemClickListner itemClickListner;
@@ -23,6 +25,7 @@ public class OrderViewHolder  extends RecyclerView.ViewHolder implements View.On
         txtOrderPhone=(TextView)itemView.findViewById(R.id.order_phone);
         txtOrderStatus=(TextView)itemView.findViewById(R.id.order_status);
 
+        //itemView.setOnLongClickListener(this);  --> Deleted no need to long click as I need Context menu
         itemView.setOnClickListener(this);
         itemView.setOnCreateContextMenuListener(this);
 
@@ -51,4 +54,13 @@ public class OrderViewHolder  extends RecyclerView.ViewHolder implements View.On
 
 
     }
+
+    //@Override
+/*    public boolean onLongClick(View v) {
+        itemClickListner.onClick(v,getAdapterPosition(),true);
+
+        return true;
+    }*/
+
+       // Long click and context menu can't implement at the same time
 }
